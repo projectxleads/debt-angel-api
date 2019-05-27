@@ -15,9 +15,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/bluebird": "^3.5.27",
+    "@types/validator": "^10.11.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.0.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.6"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
@@ -25,7 +29,6 @@
     "@types/node": "^12.0.2",
     "nodemon": "^1.19.0",
     "tslint": "^5.16.0",
-    "typescript": "^3.4.5",
-    "sequelize": "^5.8.6"
+    "typescript": "^3.4.5"
   }
 }
