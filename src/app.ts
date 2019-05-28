@@ -7,11 +7,15 @@ import { DataTypes } from 'sequelize';
 import { sequelize } from "./infrastructure/util/sequelize-mysql-db";
 import { Lead } from './domain/lead/lead.model';
 
+import { middlewareRouter } from './presentation/middleware/routes.middleware';
+
 // Initialize configuration
 dotenv.config();
 
 const port = process.env.SERVER_PORT;
 const app = express();
+
+app.use('/api', middlewareRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
