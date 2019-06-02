@@ -3,10 +3,7 @@ import { DataTypes } from "sequelize";
 
 import Lead from "../../domain/lead/lead.model";
 
-import { sequelize } from "./sequelize-mysql-db";
-
-
-const init = () => {
+const init = (sequelize: any) => {
   Lead.init({
     id: {
       type: DataTypes.INTEGER,
