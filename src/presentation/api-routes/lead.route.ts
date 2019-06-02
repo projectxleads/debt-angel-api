@@ -1,9 +1,9 @@
-import express from 'express';
+import express from "express";
 
-import { LeadController } from '../controllers/lead.controller';
+import { LeadController } from "../controllers/lead.controller";
 
 export const leadRouter = express.Router();
-const uri = '/lead';
+const uri = "/lead";
 const controller = new LeadController();
 
 leadRouter.get(uri, controller.getAllLeads);

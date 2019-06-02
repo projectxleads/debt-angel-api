@@ -2,12 +2,12 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import express from "express";
 
-import { DataTypes } from 'sequelize';
+import { DataTypes } from "sequelize";
 
+import Lead from "./domain/lead/lead.model";
 import { sequelize } from "./infrastructure/util/sequelize-mysql-db";
-import { Lead } from './domain/lead/lead.model';
 
-import { middlewareRouter } from './presentation/middleware/routes.middleware';
+import { middlewareRouter } from "./presentation/middleware/routes.middleware";
 
 // Initialize configuration
 dotenv.config();
@@ -15,7 +15,10 @@ dotenv.config();
 const port = process.env.SERVER_PORT;
 const app = express();
 
-app.use('/api', middlewareRouter);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use("/api", middlewareRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
@@ -50,7 +53,7 @@ Lead.init({
   }
 }, {
   sequelize,
-  tableName: 'Lead',
+  tableName: "Lead",
 });
 
 sequelize
