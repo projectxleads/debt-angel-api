@@ -13,6 +13,9 @@ class LeadLogic {
     }).then(result => {
       console.log("Lead Created");
       return result;
+    }).catch(err => {
+      console.log(err);
+      throw err;
     });
   }
 
