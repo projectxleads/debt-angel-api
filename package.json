@@ -6,7 +6,6 @@
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
-    "install": "npm install",
     "start": "node .",
     "start:dev": "nodemon .",
     "start:dev-old": "nodemon app.js",
