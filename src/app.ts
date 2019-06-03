@@ -12,7 +12,7 @@ import DbModel from "./application/models/my-sql-db.model";
 // Initialize configuration
 dotenv.config();
 
-const port = process.env.SERVER_PORT;
+const port = process.env.PORT || 1337;
 const app = express();
 
 app.use(bodyParser.json());
