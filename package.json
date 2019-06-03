@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
-    "install": "npm install",
+    "postinstall": "tsc",
     "start": "node .",
     "start:dev": "nodemon .",
     "start:dev-old": "nodemon app.js",
@@ -22,7 +22,8 @@
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.8.6"
+    "sequelize": "^5.8.6",
+    "typescript": "^3.4.5"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
