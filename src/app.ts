@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api", middlewareRouter);
 
 app.get("/", (req, res) => {
-  res.send("Hello world");
+  res.send("Hello world!!!");
 });
 
 const dbModel: DbModel = {
